@@ -1,0 +1,33 @@
+html { 
+    height: 100%;
+}
+
+body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0; 
+}
+
+.my-navbar {
+	background: #eee;
+	padding: 15px 0 15px 0;
+}
+
+.map-section {
+}
+
+.filter-section {
+	background: #f09a05;
+}
+
+.data-section {
+	background: #eee;
+	text-align: center;
+	padding: 50px;
+}
+
+.footer-section {
+	background: #ccc;
+	text-align: center;
+	padding: 50px;
+}
