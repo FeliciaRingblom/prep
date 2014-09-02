@@ -89,12 +89,13 @@
           document.write("<br/>");
         }
         document.write("<br/>");
-      }
-    
+      }    
 
     var data = xmlDoc.getElementsByTagName("data")[0].getElementsByTagName("axisvar1").childNodes[0];
     console.log(data.value); 
 
+    var test = xmlDoc.getElementsByTagName("data");
+    console.log("data : " + test);
     </script>
 
 
