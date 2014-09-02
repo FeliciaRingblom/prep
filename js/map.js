@@ -1,11 +1,11 @@
 var map;
-var myLatlng;
-var centerLatlng;
 var marker;
 
-function initialize() {
-  centerLatlng = new google.maps.LatLng(58.405, 15.640); 
-  myLatlng = new google.maps.LatLng(58.405000000000000, 15.64000000000000); 
+var myLatlng = new google.maps.LatLng(58.405000000000000, 15.64000000000000); 
+var centerLatlng = new google.maps.LatLng(58.405, 15.640);
+
+
+function initialize() { 
   var mapOptions = {
     zoom: 13,
     center: centerLatlng
@@ -15,8 +15,8 @@ function initialize() {
 
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      console.log(position.coords.latitude, position.coords.longitude);
+      myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); // does not update the global variable, why???
+      console.log(myLatlng.toString());
 
     }, function() {
       handleNoGeolocation(true);
@@ -25,8 +25,7 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-
-  myLatlng = new google.maps.LatLng(58.38262915490548, 15.577273345975613); //EJ HÅRDKODAT!!!!
+  console.log(myLatlng.toString());
 
   marker = new google.maps.Marker({
       map: map,
@@ -58,7 +57,8 @@ function handleNoGeolocation(errorFlag) {
   } else {
     console.log('Error: Your browser doesn\'t support geolocation.');
   }
-  myLatlng = centerLatlng;
+  alert("hejbjev");
+  myLatlng = new google.maps.LatLng(58.405, 15.640); 
 }
 
 function updatePos() {
