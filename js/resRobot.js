@@ -25,7 +25,7 @@ var arrivals=xmlDoc.getElementsByTagName("arrival");
 var arrivalSegment = (getNumberOfSegments(0)-1);
 
 calculateTravelTime(0, arrivalSegment);
-getNumberOfBusRides(0);
+getBusRides(0);
 
 // document.write("<table border='1'>");
 // document.write("<tr><td>");
@@ -48,8 +48,8 @@ function calculateTravelTime(departureRoute, arrivalRoute)
 	stopH = stop.substring(11,13);
 	stopM = stop.substring(14, 16);
 
-	 console.log("start = " + start);
-	 console.log("stop = " + stop);
+	 //console.log("start = " + start);
+	 //console.log("stop = " + stop);
 
 	var h = stopH-startH;
 	var m = stopM-startM;
