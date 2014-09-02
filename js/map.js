@@ -57,7 +57,6 @@ function handleNoGeolocation(errorFlag) {
   } else {
     console.log('Error: Your browser doesn\'t support geolocation.');
   }
-  alert("hejbjev");
   myLatlng = new google.maps.LatLng(58.405, 15.640); 
 }
 
