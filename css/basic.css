@@ -9,8 +9,8 @@ body {
 }
 
 .my-navbar {
-	background: #ffffff;
-	color: #FFFFFF !important;
+	background: #526e82;
+	color: #EEEEEE !important;
 	padding: 15px 0 15px 0;
 	margin: 0;
 }
@@ -18,7 +18,7 @@ body {
 a.logo{
 	font-weight: bold;
 	font-size: 28px;
-	color: #ed7e35 !important;
+	color: #FFFFFF !important;
 }
 
 li.active{
@@ -26,7 +26,7 @@ li.active{
 }
 
 .map-section {
-	background: #4ebfb9;
+	background: #FFFFFF;
 }
 
 .filter-sidebar{
@@ -34,7 +34,7 @@ li.active{
 }
 
 .order-section {
-	background-color: #ed7e35;
+	background-color: #ff8989;
 	color: #ffffff;
 	font-size: 22px;
 	padding: 15px 0 15px 0;
@@ -43,13 +43,13 @@ li.active{
 .order-section a{
 	color: #ffffff;
 	padding: 5px 15px 5px 15px;
-	background: #FF9651;
+	background: #ff8989;
 	border-radius: 2px;
 }
 
 .order-section a:hover{
 	text-decoration: none;
-	background: #FFAB51;
+	background: #ff8989;
 }
 
 .data-section {

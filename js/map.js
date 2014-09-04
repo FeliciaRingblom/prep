@@ -13,9 +13,9 @@ function initialize() {
   var styles = [
   {
     stylers: [
-      { hue: "#00ffe6" },
+      { hue: "#4cd9c0" },
       { saturation: 20 },
-      { lightness: -5  }
+      { lightness: 0  }
     ]
   },{
     featureType: "road",
@@ -45,7 +45,6 @@ function initialize() {
       map: map,
       draggable:true,
       position: centerLatlng,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
   });
 
   if(navigator.geolocation) {
