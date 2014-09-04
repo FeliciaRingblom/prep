@@ -9,15 +9,47 @@ body {
 }
 
 .my-navbar {
-	background: #eee;
+	background: #ffffff;
+	color: #FFFFFF !important;
 	padding: 15px 0 15px 0;
+	margin: 0;
+}
+
+a.logo{
+	font-weight: bold;
+	font-size: 28px;
+	color: #ed7e35 !important;
+}
+
+li.active{
+	background-color: #ed7e35;
 }
 
 .map-section {
+	background: #4ebfb9;
 }
 
-.filter-section {
-	background: #f09a05;
+.filter-sidebar{
+	padding: 30px 30px 30px 50px;
+}
+
+.order-section {
+	background-color: #ed7e35;
+	color: #ffffff;
+	font-size: 22px;
+	padding: 15px 0 15px 0;
+}
+
+.order-section a{
+	color: #ffffff;
+	padding: 5px 15px 5px 15px;
+	background: #FF9651;
+	border-radius: 2px;
+}
+
+.order-section a:hover{
+	text-decoration: none;
+	background: #FFAB51;
 }
 
 .data-section {
