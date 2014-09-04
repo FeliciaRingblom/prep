@@ -1,4 +1,4 @@
-console.log('i resrobot.js');
+//console.log('i resrobot.js');
 
 var startName = 'Linköping universitetet',
 	startX = 15.577074442163966, 
