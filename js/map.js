@@ -45,6 +45,7 @@ function initialize() {
       map: map,
       draggable:true,
       position: centerLatlng,
+      icon: 'img/home-blue.png'
   });
 
   if(navigator.geolocation) {
