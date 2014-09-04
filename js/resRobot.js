@@ -1,4 +1,4 @@
-console.log('i resrobot.js');
+//console.log('i resrobot.js');
 
 var startName = 'Linköping universitetet',
 	startX = 15.577074442163966, 
@@ -63,7 +63,7 @@ function calculateTravelTime(departureRoute, arrivalRoute)
 	return {h: h , m: m};
 }
 
-//returnera hur många byten resvägen "route" har
+//returnera hur många delar resvägen "route" består av (tex: gång buss gång -> 3)
 function getNumberOfSegments(route)
 {
 	return ttitems[route].getElementsByTagName("segment").length;
