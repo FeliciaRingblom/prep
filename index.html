@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv-se" lang="sv-se">
+<html ng-app="schoolApp" xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv-se" lang="sv-se">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -13,6 +13,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+  <body>
   
     <!-- Fixed navbar -->
     <div class="navbar navbar-default my-navbar" role="navigation">
@@ -114,11 +116,17 @@
                     <h1>Here goes the data....</h1>
                     <h2>Exempel på angular: </h2>
                     <p>Så här används angular: </p>
-                     <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                     <!-- <input type="text" ng-model="yourName" placeholder="Enter a name here">
                       <h1>Hello, {{ yourName }}!</h1>
 
+            
+ -->
+                    <div ng-view=""></div>
+
+
+      
                       <h2> Exempel på street view: Vittra skolan, Lambohov: </h2>
-                      <img src="http://maps.googleapis.com/maps/api/streetview?size=250x250&location=Tröskaregatan75Linköping&AIzaSyCyfGb7S9OQLg-vjvJg6e9g-z7gNVXgeGQ">
+                      <!-- <img src="http://maps.googleapis.com/maps/api/streetview?size=250x250&location=Tröskaregatan75Linköping&AIzaSyCyfGb7S9OQLg-vjvJg6e9g-z7gNVXgeGQ"> -->
 
                 </div><!-- ./col-lg-12 -->
             </div><!-- ./row-->
@@ -135,38 +143,38 @@
         </div><!-- ./container -->
     </section>
 
-    <script>
-      if (window.XMLHttpRequest)
-      {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.open("GET","data/kvalitetsarbete_skolkvalitet_grundskolan_gr901.xml",false);
-      xmlhttp.send();
-      xmlDoc=xmlhttp.responseXML; 
+    // <script>
+    //   if (window.XMLHttpRequest)
+    //   {// code for IE7+, Firefox, Chrome, Opera, Safari
+    //     xmlhttp=new XMLHttpRequest();
+    //   }
+    //   else
+    //   {// code for IE6, IE5
+    //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    //   }
+    //   xmlhttp.open("GET","data/kvalitetsarbete_skolkvalitet_grundskolan_gr901.xml",false);
+    //   xmlhttp.send();
+    //   xmlDoc=xmlhttp.responseXML; 
 
-      var x=xmlDoc.getElementsByTagName("axis");
-      for (i=0;i<x.length;i++)
-      { 
-        var y = x[i].getElementsByTagName("value");
-        for (j=0;j<y.length;j++)
-        { 
-          document.write(y[j].getElementsByTagName("textlang")[0].childNodes[0].nodeValue);
-          document.write("<br/>");
-        }
-        document.write("<br/>");
-      }    
+    //   var x=xmlDoc.getElementsByTagName("axis");
+    //   for (i=0;i<x.length;i++)
+    //   { 
+    //     var y = x[i].getElementsByTagName("value");
+    //     for (j=0;j<y.length;j++)
+    //     { 
+    //       document.write(y[j].getElementsByTagName("textlang")[0].childNodes[0].nodeValue);
+    //       document.write("<br/>");
+    //     }
+    //     document.write("<br/>");
+    //   }    
 
-    var data = xmlDoc.getElementsByTagName("data")[0].childNodes[1].nodeValue;
+    // var data = xmlDoc.getElementsByTagName("data")[0].childNodes[1].nodeValue;
     
 
-    var new_data = data.split(" ");
-    console.log(new_data[0]); 
+    // var new_data = data.split(" ");
+    // console.log(new_data[0]); 
 
-    </script>
+    // </script>
 
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyfGb7S9OQLg-vjvJg6e9g-z7gNVXgeGQ"></script>
@@ -174,7 +182,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src = "js/schoolApp.js"></script>
+    <script src="js/services.js"></script>
     <script src="js/resRobot.js"></script>
+    <script src="js/controllers.js"></script>
 
   </body>
 </html>
